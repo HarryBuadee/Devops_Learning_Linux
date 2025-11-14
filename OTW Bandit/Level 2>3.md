@@ -6,20 +6,16 @@ The password for the next level is stored in a file called --spaces in this file
 
 Actions taken:
 
-
+- The filename starts with -, so the shell thinks it’s an option. Therefore I used ./ makes the shell treat it as a file in the current directory, so cat reads it properly.
+- The filename has spaces, so I put it in quotes to keep it as one argument. Without quotes, the shell would split it into separate words.
+  
+  
 ````bash
-bandit3@bandit:~$ ls
-inhere
-bandit3@bandit:~$ file inhere/
-inhere/: directory
-bandit3@bandit:~$ cd inhere/
-bandit3@bandit:~/inhere$ ls
-bandit3@bandit:~/inhere$ ls -a
-.  ..  ...Hiding-From-You
-bandit3@bandit:~/inhere$ cat ...Hiding-From-You
-2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
-
-
+bandit2@bandit:~$ ls
+--spaces in this filename--
+bandit2@bandit:~$ cat "./--spaces in this filename--"
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+bandit2@bandit:~$
 
 ````
 
