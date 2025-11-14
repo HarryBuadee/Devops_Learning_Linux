@@ -1,5 +1,5 @@
 
-# Bandit Level 0
+# Bandit Level 0 -> 1
 
 ## Level Goal
 
