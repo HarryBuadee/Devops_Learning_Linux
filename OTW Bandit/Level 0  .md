@@ -12,4 +12,3 @@ I initiated an SSH session with the specified user and port:
 ```bash
 ssh -p 2220 bandit0@bandit.labs.overthewire.org 
 ```
-Password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
