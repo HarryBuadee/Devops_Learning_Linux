@@ -19,6 +19,7 @@ bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
 data.txt
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$
 ````
+
 ```bash
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ xxd -r data.txt > data2
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
