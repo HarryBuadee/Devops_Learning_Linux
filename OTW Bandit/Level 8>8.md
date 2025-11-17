@@ -16,6 +16,10 @@ HeSAR9opVOfF0r39s92ig6Pu9EOeVwhF
 9bFDdDjS8i613oA6Gv5Gv9tyIm6giwie
 
 bandit8@bandit:~$ sort data.txt | uniq -u
+#I used the command (sort) to sort arranges all
+#lines in order so duplicates are grouped.
+#uni -u to to print only the ones that don't have duplicates.
+
 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 
