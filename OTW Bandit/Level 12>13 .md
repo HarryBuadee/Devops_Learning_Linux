@@ -8,6 +8,8 @@ Or better, use the command “mktemp -d”. Then copy the datafile using cp, and
 
 Actions taken :
 
+### data 1
+- Created a temporary working directory whith a hard to guess name
 ````bash
 bandit12@bandit:~$ mktemp -d
 /tmp/tmp.ZhNdxGK8QW
@@ -19,25 +21,46 @@ bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
 data.txt
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$
 ````
-
+### data 2
 ```bash
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ xxd -r data.txt > data2
+
+````
+- Used the command above to take the hex in data.txt and turn it back into a normal file called data2xxd
+````
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
 data2  data.txt
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ file data2
+````
+Used the command above to find out the file type of data 2 which is shows below
+````
 data2: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:00 2025, max compression, from Unix, original size modulo 2^32 572
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$
 
 ````
 
 ````bash
+````
 
+- Changed the file extension to match the file’s type: 
+````
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ mv data2 data.gz
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ file data.gz
 data.gz: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:00 2025, max compression, from Unix, original size modulo 2^32 572
+````
+
+- Decompressed the file below to :
+
+````
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ gzip -d data.gz
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
 data  data.txt
+````
+- Checked the file type with the command file and it was bzip2 file.
+  The processes above I kept on doing till I go the password which is shown
+  as scroll go down the page.
+
+````
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ file data
 data: bzip2 compressed data, block size = 900k
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ mv data data.bz2
@@ -59,7 +82,7 @@ bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ file data
 data: POSIX tar archive (GNU)
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$
 
-
+### data 1
 
 bandit 12(.2)
 bandit12@bandit:~$ mktemp -d
@@ -81,6 +104,10 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ xxd -r data.txt > data1.bin
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data1.bin
 data1.bin: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 564
+`````
+### data 2
+
+````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data1.bin data2.gz
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ gzip -d data2.gz
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ ls
@@ -90,7 +117,7 @@ data2: bzip2 compressed data, block size = 900k
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 
 ``````
-
+### data 3
 
 `````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data2 data3.bz2
@@ -100,9 +127,9 @@ data3  data.txt  zone1.bin
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data3
 data3: gzip compressed data, was "data4.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 20480
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
-
-data 4
-
+`````
+#### data 4
+`````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data3
 data3: gzip compressed data, was "data4.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 20480
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data3 data4.gz
@@ -113,8 +140,9 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data4
 data4: POSIX tar archive (GNU)
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 ```````
+### data5
 ```````
-data5
+
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data4
 data4: POSIX tar archive (GNU)
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data4 data5.tar
@@ -122,7 +150,7 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ tar -xf data5.tar
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ ls
 data5.bin  data5.tar  data.txt  zone1.bin
 ````````
-
+### data 6
 ````````
 data6
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data5.bin data6.tar
@@ -135,7 +163,7 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 
 ````````
 
-
+### Password
 ```````
 pwd
 FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn 
