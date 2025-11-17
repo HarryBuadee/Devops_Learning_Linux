@@ -10,6 +10,9 @@ Actions taken:
 bandit7@bandit:~$ ls
 data.txt
 bandit7@bandit:~$ grep "millionth" data.txt | awk '{print $2}'
+#I used the command grep, |, and awk to searches the file data.txt
+#for any line containing the word millionth. and print the word next
+#to it. 
 dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 bandit7@bandit:~$
 ```
