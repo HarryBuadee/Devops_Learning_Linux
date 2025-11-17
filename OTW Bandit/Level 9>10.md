@@ -33,6 +33,7 @@ q<=,
 'QHE=
 +=NBf
 bandit9@bandit:~$
+````
 
 - I used strings infront of the pipeline to filter out all
 of the unreadable charaters leaving only human readable 
