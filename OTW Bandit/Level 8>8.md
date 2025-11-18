@@ -14,11 +14,13 @@ q9C0UQZ52GznEieTtXOgPrVvIvB60jxL
 HeSAR9opVOfF0r39s92ig6Pu9EOeVwhF
 6WLU0f8RPUW6O9z6rdXb2wHufXmbYn8f
 9bFDdDjS8i613oA6Gv5Gv9tyIm6giwie
-
+```
+- I used the command (sort) to sort arranges all
+lines in order so duplicates are grouped.
+uniq -u to to print only the ones that don't have duplicates.
+```
 bandit8@bandit:~$ sort data.txt | uniq -u
-#I used the command (sort) to sort arranges all
-#lines in order so duplicates are grouped.
-#uni -u to to print only the ones that don't have duplicates.
+
 
 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
