@@ -6,7 +6,8 @@ The password for the next level is stored in a hidden file in the inhere directo
 
 Actions taken:
 
-After getting into inhere directoy and using the ls command nothing appeared. I used the ls -a command which shown the hidden file.
+- After getting into inhere directoy and using the ls command nothing appeared. I used the ls -a command which shown the hidden file.
+- Lastly used cat to displau the password.
 
 ````bash
 
