@@ -7,11 +7,13 @@ The password for the next level is stored in a file called readme located in the
 Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
 
 Actions taken :
-
+ - Used the ls command to list what is in the home directory
 ````bash
 bandit0@bandit:~$ ls
 readme
-#Used cat command to to read the file and get the password.
+````
+- Used cat command to to read the file and get the password.
+````
 bandit0@bandit:~$ cat readme
 Congratulations on your first steps into the bandit game!!
 Please make sure you have read the rules at https://overthewire.org/rules/
