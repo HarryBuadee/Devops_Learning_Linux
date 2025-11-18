@@ -19,8 +19,8 @@ find: ‘/proc/tty/driver’: Permission denied
 find: ‘/proc/1/task/1/fd’: Permission denied
 find: ‘/proc/1/task/1/fdinfo’: Permission denied
 find: ‘/proc/1/task/1/ns’: Permission denied
-#To hide the many permission denied messaged I used this command (2>/dev/null).
-#to redirect the error messages.
+
+- To hide the many permission denied messaged I used this command (2>/dev/null).To redirect the error messages.
 
 bandit6@bandit:~$ find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
 /var/lib/dpkg/info/bandit7.password
