@@ -12,6 +12,9 @@ Actions taken:
 bandit4@bandit:~$ ls
 inhere
 bandit4@bandit:~$ cd inhere/
+````
+- Used the command file ./* to show me the file type of every file type in this folder below.
+```
 bandit4@bandit:~/inhere$ ls
 -file00  -file01  -file02  -file03  -file04  -file05  -file06  -file07  -file08  -file09
 bandit4@bandit:~/inhere$ file ./*
@@ -26,11 +29,14 @@ bandit4@bandit:~/inhere$ file ./*
 ./-file07: ASCII text
 ./-file08: data
 ./-file09: data
+
+```
+- Used ./ before the filename so it isn’t mistaken for a command option. Adding ./ makes it clear to the system that this is a file path, not an option.
+````
 bandit4@bandit:~/inhere$ cat ./file07
 cat: ./file07: No such file or directory
 bandit4@bandit:~/inhere$ cat ./-file07
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
-# used ./ before the filename because if a file's name starts with a hyphen (-), the system will mistake it for a command-line option.
-# Using ./ explicitly shows the system that it is a file path.
+
 bandit4@bandit:~/inhere$
 ```
