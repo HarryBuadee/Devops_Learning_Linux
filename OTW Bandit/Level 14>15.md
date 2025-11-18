@@ -6,9 +6,14 @@ The password for the next level can be retrieved by submitting the password of t
 
 Actions taken: 
 
+- I used the 'NC' because with that command you can connect to a specific
+  as you can see below how I used it:
 ```
 bandit14@bandit:~$ ls
 bandit14@bandit:~$   nc localhost 30000
+```
+- Password:
+```
 MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 Correct!
 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
