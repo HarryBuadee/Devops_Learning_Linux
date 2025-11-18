@@ -6,6 +6,10 @@ The password for the next level is stored in the file data.txt next to the word 
 
 Actions taken:
 
+- I used the command grep, |, and awk to searches the file data.txt
+#for any line containing the word millionth. and print the word next
+#to it. 
+
 ```bash
 bandit7@bandit:~$ ls
 data.txt
