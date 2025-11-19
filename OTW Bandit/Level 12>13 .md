@@ -8,6 +8,7 @@ Or better, use the command “mktemp -d”. Then copy the datafile using cp, and
 
 Actions taken :
 
+
 Data 1
 
 Created a tempoary directory with a hard to guess name:
@@ -29,6 +30,7 @@ Used "file" to check the file type of "data1.bin". As you can see below it's a g
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data1.bin
 data1.bin: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 564
 `````
+
 Data 2
 
 Changed the file format to "gz" this so I can de compress with gzip -d command. I followed the same process until
@@ -43,8 +45,8 @@ data2: bzip2 compressed data, block size = 900k
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 
 ``````
-Data 3
 
+Data 3
 `````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data2 data3.bz2
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ bzip2 -d data3.bz2
@@ -54,6 +56,7 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data3
 data3: gzip compressed data, was "data4.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 20480
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 `````
+
 Data 4
 `````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data3 data4.gz
@@ -64,6 +67,7 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data4
 data4: POSIX tar archive (GNU)
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$
 ```````
+
 Data5
 ```````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data4 data5.tar
@@ -71,6 +75,7 @@ bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ tar -xf data5.tar
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ ls
 data5.bin  data5.tar  data.txt  zone1.bin
 ````````
+
 Data 6
 ````````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ mv data5.bin data6.tar
