@@ -16,4 +16,4 @@ The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 bandit11@bandit:~$
 ```
 - I used this command (cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m')
-  to read the encoded text and apply ROTE 13  decode the password.
+  to read the encoded text and apply ROTE 13 cipher decode the password.
