@@ -12,12 +12,12 @@ data.txt
 bandit10@bandit:~$ cat data.txt
 VGhlIHBhc3N3b3JkIGlzIGR0UjE3M2ZaS2IwUlJzREZTR3NnMlJXbnBOVmozcVJyCg==
 ```
-- The output have shows the encoded base64 text
+The output have shows the encoded base64 text
 
 ```
 bandit10@bandit:~$ cat data.txt | base64 -d
 The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 bandit10@bandit:~$
 ```
-- I used the cat data.txt | base64 -d command to decode
+I used the cat data.txt | base64 -d command to decode
 the text into plain text this displayed the password.
