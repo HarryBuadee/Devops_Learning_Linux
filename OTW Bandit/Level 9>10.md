@@ -6,12 +6,15 @@ The password for the next level is stored in the file data.txt in one of the few
 
 Actions taken:
 
+- The command above outputted that text file is binary
 ```bash
 bandit9@bandit:~$ cat data.txt | grep "="
 grep: (standard input): binary file matches
 
 ````
-- The command above outputted that text file is binary
+- Then grep "=" searches through that readable output and 
+shows only the line that contains the = sign, which is 
+where the password is stored.
 ````
 bandit9@bandit:~$ strings data.txt | grep "="
 FB`=
@@ -35,10 +38,4 @@ q<=,
 bandit9@bandit:~$
 ````
 
-- I used strings infront of the pipeline to filter out all
-of the unreadable charaters leaving only human readable 
-charatcters.
-- Then grep "=" searches through that readable output and 
-shows only the line that contains the = sign, which is 
-where the password is stored.
 
