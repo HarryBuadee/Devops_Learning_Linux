@@ -20,4 +20,4 @@ The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 bandit10@bandit:~$
 ```
 - I used the cat data.txt | base64 -d command to decode
-the text into plain text. This displayed the text.
+the text into plain text this displayed the password.
