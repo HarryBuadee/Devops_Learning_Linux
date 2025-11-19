@@ -8,7 +8,7 @@ Or better, use the command “mktemp -d”. Then copy the datafile using cp, and
 
 Actions taken :
 
-### data 1
+## Data 1
 
 Created a tempoary directory with a hard to guess name:
 ````bash
@@ -24,12 +24,12 @@ Used xxd -r to convert the hex dump back into its original binary form:
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ xxd -r data.txt > data1.bin
 
 `````
-Used "file" to check the file type of "data1.bin". As you can see below it's a gzip file.
+Used "file" to check the file type of "data1.bin". As you can see below it's a gzip file:
 `````
 bandit12@bandit:/tmp/tmp.KZ4Q06B6ts$ file data1.bin
 data1.bin: gzip compressed data, was "data2.bin", last modified: Tue Oct 14 09:26:06 2025, max compression, from Unix, original size modulo 2^32 564
 `````
-### data 2
+## data 2
 
 Changed the file format to "gz" this so I can de compress with gzip -d command. I followed the same process until
 I got a the password.
