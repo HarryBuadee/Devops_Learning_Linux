@@ -22,11 +22,11 @@ data.txt
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$
 ````
 ### data 2
+
+- Used the command above to take the hex in data.txt and turn it back into a normal file called data2xxd
 ```bash
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ xxd -r data.txt > data2
-
 ````
-- Used the command above to take the hex in data.txt and turn it back into a normal file called data2xxd
 ````
 bandit12@bandit:/tmp/tmp.ZhNdxGK8QW$ ls
 data2  data.txt
