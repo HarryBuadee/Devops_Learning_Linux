@@ -1,23 +1,28 @@
 
 # Solution: "The Command Line Murders"
 
-
+Goals:
+- Going through hints find clue into who the murderer is.
 
 
 ## Actions taken:
 
-
+Checked out the mystery directoy
 ````
 admin@ip-10-1-12-119:~/clmystery$ cd mystery/
 admin@ip-10-1-12-119:~/clmystery/mystery$ ls
 crimescene  interviews  memberships  people  streets  vehicles
+````
+
+Investigating into who the perpetraor is. Found some clues.
+````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat crimescene | grep "CLUE"
 CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
 CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for Rotary_Club, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
 CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
 
 ````
-
+Read all the hints which will help me find the murderer
 ````
 admin@ip-10-1-12-119:~/clmystery$ cat hint1
 Try poking around what's in a file by using the 'head' command:
@@ -77,12 +82,18 @@ Or you can pipe the result to 'wc -l':
 
         cat Fitness_Galaxy AAA United_MileagePlus | grep "John Smith" | wc -l
 admin@ip-10-1-12-119:~/clmystery/mystery$
+````
+
+
+From the clue from crimesnce I'm trying to find out who Annabel is becuase she is a witness.
+````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat people | grep "Annabel"
 Annabel Sun     F       26      Hart Place, line 40
 Oluwasegun Annabel      M       37      Mattapan Street, line 173
 Annabel Church  F       38      Buckingham Place, line 179
 Annabel Fuglsang        M       40      Haley Street, line 176
 `````
+By goign through the interviews. Annabel Fuglsang was the witness
 `````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat interviews/interview-47246024
 Ms. Sun has brown hair and is not from New Zealand.  Not the witness from the cafe.
@@ -93,13 +104,14 @@ However, she reports seeing the car that fled the scene.  Describes it as a blue
 
 `````
 
+
 `````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Hart_Place | head -n 40 | tail -n 1
 SEE INTERVIEW #47246024
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Buckingham_Place | head -n 179 | tail -n 1
 SEE INTERVIEW #699607
 `````
-
+Finding all the Honda's with the colour blue
 `````
 admin@ip-10-1-13-85:~/clmystery/mystery$ grep -C4 "Honda" vehicles | grep -C4 "Blue" | grep -C4 "L337"
 --
@@ -165,7 +177,7 @@ Height: 6'2"
 
 `````
 
-
+Checking to see if Joe Germuska are part fo the AAA, Delta_SkyMiles, Museum of bash history, Rotary Club and Terminal City. Which he all is.
 ``````
 admin@ip-10-1-13-85:~/clmystery/mystery$ grep "Joe Germuska" memberships/*
 memberships/AAA:Joe Germuska
@@ -176,6 +188,7 @@ memberships/Terminal_City_Library:Joe Germuska
 admin@ip-10-1-13-85:~/clmystery/mystery$
 
 ``````
+Verifying the Joe Germuska is the muderer.
 ``````
 admin@ip-10-1-13-85:~/clmystery/mystery$ cd
 admin@ip-10-1-13-85:~$ ls
