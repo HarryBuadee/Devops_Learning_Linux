@@ -1,4 +1,4 @@
-# "Saskatoon": counting IPs.
+# Solution: "Saskatoon": counting IPs.
 
 ## Goals
 
@@ -25,7 +25,7 @@ This printed only the IP address not the amount of times it appeared aswell
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}'
 66.249.73.135
 ````
-Wrote ther soluition into the /home/admin/highestip.txt
+Wrote the soluition into the /home/admin/highestip.txt
 ````
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}' > /home/admin/highestip.txt
 ````
