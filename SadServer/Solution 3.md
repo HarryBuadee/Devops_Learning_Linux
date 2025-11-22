@@ -6,7 +6,7 @@ Goals:
 
 Actions taken:
 
-Checked out the mystery directoy
+Checked out the mystery directoy.
 ````
 admin@ip-10-1-12-119:~/clmystery$ cd mystery/
 admin@ip-10-1-12-119:~/clmystery/mystery$ ls
