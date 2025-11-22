@@ -1,4 +1,4 @@
-# Solution: Killing the process writing to /var/log/bad.log
+# Solution - Killing the process writing to /var/log/bad.log
 
 ## An active process was persistently writing to /var/log/bad.log, causing the disk to fill up. The goals were to:
 
