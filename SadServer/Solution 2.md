@@ -19,18 +19,18 @@ admin@ip-172-31-27-155:~$ cat /home/admin/access.log
 ````
 admin@ip-172-31-27-155:/$ awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -n 1
     482 66.249.73.135
-
+````
 This printed only the IP address not the amount of times it appeared aswell
 ````
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}'
 66.249.73.135
-````
 ````
 Wrote ther soluition into the /home/admin/highestip.txt
 ````
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}' > /home/admin/highestip.txt
 ````
 - Checked the file’s SHA-1 hash value
+
 ````
 admin@ip-172-31-27-155:/$ sha1sum /home/admin/highestip.txt
 6ef426c40652babc0d081d438b9f353709008e93  /home/admin/highestip.txt
