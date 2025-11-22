@@ -7,21 +7,21 @@ Goals:
 
 Actions taken:
 
-Checked out the mystery directoy.
+- Checked out the mystery directoy.
 ````
 admin@ip-10-1-12-119:~/clmystery$ cd mystery/
 admin@ip-10-1-12-119:~/clmystery/mystery$ ls
 crimescene  interviews  memberships  people  streets  vehicles
 ````
 
-Investigating to identify the perpetrator. I’ve uncovered some clues.
+- Investigating to identify the perpetrator. I’ve uncovered some clues.
 ````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat crimescene | grep "CLUE"
 CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
 CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for Rotary_Club, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
 CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
 ````
-Reviewed all the hints from 1 to 8. This will help me identify the murderer.
+- Reviewed all the hints from 1 to 8. This will help me identify the murderer.
 ````
 admin@ip-10-1-12-119:~/clmystery$ cat hint1
 Try poking around what's in a file by using the 'head' command:
@@ -83,7 +83,7 @@ Or you can pipe the result to 'wc -l':
 admin@ip-10-1-12-119:~/clmystery/mystery$
 ````
 
-From the clue at the crime scene, I'm trying to find out who Annabel is because she is a witness.
+- From the clue at the crime scene, I'm trying to find out who Annabel is because she is a witness.
 ````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat people | grep "Annabel"
 Annabel Sun     F       26      Hart Place, line 40
@@ -91,14 +91,14 @@ Oluwasegun Annabel      M       37      Mattapan Street, line 173
 Annabel Church  F       38      Buckingham Place, line 179
 Annabel Fuglsang        M       40      Haley Street, line 176
 `````
-Checked the address for the two females named Annabel. I only checked for the females because from clue from the crimescene stated that the witness was a female.
+- Checked the address for the two females named Annabel. I only checked for the females because from clue from the crimescene stated that the witness was a female.
 `````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Hart_Place | head -n 40 | tail -n 1
 SEE INTERVIEW #47246024
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Buckingham_Place | head -n 179 | tail -n 1
 SEE INTERVIEW #699607
 `````
-Checked the interviews and discovered Annabel Church was the witness from the statement.
+- Checked the interviews and discovered Annabel Church was the witness from the statement.
 `````
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat interviews/interview-47246024
 Ms. Sun has brown hair and is not from New Zealand.  Not the witness from the cafe.
@@ -108,7 +108,7 @@ Interviewed Ms. Church at 2:04 pm.  Witness stated that she did not see anyone s
 However, she reports seeing the car that fled the scene.  Describes it as a blue Honda, with a license plate that starts with "L337" and ends with "9"
 
 `````
-From the witness statement I read, I searched for blue Hondas. With the start of the registration "L337" which I got from hint 7.
+- From the witness statement I read, I searched for blue Hondas. With the start of the registration "L337" which I got from hint 7.
 `````
 admin@ip-10-1-13-85:~/clmystery/mystery$ grep -C4 "Honda" vehicles | grep -C4 "Blue" | grep -C4 "L337"
 --
@@ -173,7 +173,7 @@ Height: 6'2"
 
 
 `````
-Verifying whether Joe Germuska belongs to the AAA, Delta SkyMiles, Museum of Bash History, Rotary Club, and Terminal City. It turns out he is affiliated with all of them.
+- Verifying whether Joe Germuska belongs to the AAA, Delta SkyMiles, Museum of Bash History, Rotary Club, and Terminal City. It turns out he is affiliated with all of them.
 ``````
 admin@ip-10-1-13-85:~/clmystery/mystery$ grep "Joe Germuska" memberships/*
 memberships/AAA:Joe Germuska
@@ -184,7 +184,7 @@ memberships/Terminal_City_Library:Joe Germuska
 admin@ip-10-1-13-85:~/clmystery/mystery$
 
 ``````
-Verifying the Joe Germuska is the muderer.
+- Verifying the Joe Germuska is the muderer.
 ``````
 admin@ip-10-1-13-85:~/clmystery/mystery$ cd
 admin@ip-10-1-13-85:~$ ls
