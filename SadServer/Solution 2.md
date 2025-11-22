@@ -10,26 +10,26 @@ Goals:
 
 ## Actions taken:
 
-Checked the log file.
+- Checked the log file.
 ```
 admin@ip-172-31-27-155:~$ cat /home/admin/access.log
 
 ````
-Used the command to identify the most active IP address in the access log and to show how many requests it made.
+- Used the command to identify the most active IP address in the access log and to show how many requests it made.
 ````
 admin@ip-172-31-27-155:/$ awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -n 1
     482 66.249.73.135
 ````
-This printed only the IP address not the amount of times it appeared aswell
+- This printed only the IP address not the amount of times it appeared aswell
 ````
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}'
 66.249.73.135
 ````
-Wrote the soluition into the /home/admin/highestip.txt
+- Wrote the soluition into the /home/admin/highestip.txt
 ````
 admin@ip-172-31-27-155:/$  awk '{print $1}' /home/admin/access.log | sort | uniq -c | sort -nr | head -1 | awk '{print $2}' > /home/admin/highestip.txt
 ````
-Checked the file’s SHA-1 hash value
+- Checked the file’s SHA-1 hash value
 
 ````
 admin@ip-172-31-27-155:/$ sha1sum /home/admin/highestip.txt
