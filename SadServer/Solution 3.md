@@ -3,6 +3,7 @@
 
 Goals:
 - Going through hints find clue into who the murderer is.
+- Validating and verifying that it's the actual murderer.
 
 Actions taken:
 
