@@ -1,6 +1,6 @@
 # Solution: Killing the process writing to /var/log/bad.log
 
-## Goals:
+Goals:
 
 - Locate the responsible process filling up the disk
 
