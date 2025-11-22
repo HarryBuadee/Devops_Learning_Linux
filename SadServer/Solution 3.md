@@ -19,7 +19,6 @@ admin@ip-10-1-12-119:~/clmystery/mystery$ cat crimescene | grep "CLUE"
 CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
 CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for Rotary_Club, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
 CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
-
 ````
 Reviewed all the hints from 1 to 8. This will help me identify the murderer.
 ````
@@ -97,8 +96,6 @@ admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Hart_Place | head -n 40 | 
 SEE INTERVIEW #47246024
 admin@ip-10-1-12-119:~/clmystery/mystery$ cat streets/Buckingham_Place | head -n 179 | tail -n 1
 SEE INTERVIEW #699607
-
-
 `````
 Checked the interviews and discovered Annabel Church was the witness from the statement.
 `````
@@ -109,10 +106,6 @@ Interviewed Ms. Church at 2:04 pm.  Witness stated that she did not see anyone s
 
 However, she reports seeing the car that fled the scene.  Describes it as a blue Honda, with a license plate that starts with "L337" and ends with "9"
 
-`````
-
-
-`````
 `````
 From the witness statement I read, I searched for blue Hondas. With the start of the registration "L337" which I got from hint 7.
 `````
