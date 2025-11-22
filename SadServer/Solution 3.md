@@ -1,5 +1,5 @@
 
-# Scenario: "The Command Line Murders"
+# Solution: "The Command Line Murders"
 
 
 
