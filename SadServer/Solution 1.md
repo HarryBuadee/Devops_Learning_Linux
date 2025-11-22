@@ -1,4 +1,4 @@
-# Solution: Killing the process writing to /var/log/bad.log
+# Solution: "Saint John": what is writing to this log file?
 
 Goals:
 
